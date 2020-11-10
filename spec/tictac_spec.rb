@@ -1,6 +1,6 @@
-require_relative '../lib/game_board.rb'
-require_relative '../lib/game_player.rb'
-require_relative '../lib/game.rb'
+require_relative '../lib/game_board'
+require_relative '../lib/game_player'
+require_relative '../lib/game'
 
 describe Board do
   let(:game_b) { Board.new }
