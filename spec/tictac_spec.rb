@@ -12,12 +12,20 @@ describe Board do
     it 'returns true if the argument passed is between 1, 9' do
       expect(game_b.valid_move?(1)).to eql(true)
     end
+
+    it 'returns false if the argument passed is not between 1, 9 or position is taken' do
+      expect(game_b.valid_move?(11)).to eql(false)
+    end
   end
 
   describe '#position_taken?' do
     it 'returns true if the position_taken' do
       game_b.board = ['X', 2, 3, 4, 5, 6, 7, 8, 9]
       expect(game_b.position_taken?(1)).to eql(true)
+    end
+
+    it 'returns false if the position is not taken' do
+      expect(game_b.position_taken?(4)).to eql(false)
     end
   end
 
